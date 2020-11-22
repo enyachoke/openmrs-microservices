@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "conceptsConceptNameTagMap": {
+      "home": {
+        "title": "Concept Name Tag Maps",
+        "createLabel": "Create a new Concept Name Tag Map",
+        "createOrEditLabel": "Create or edit a Concept Name Tag Map",
+        "notFound": "No Concept Name Tag Maps found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Concept Name Tag Map {{ id }}?"
+      },
+      "detail": {
+        "title": "Concept Name Tag Map"
+      },
+      "uuid": "Uuid"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConceptNameTagMap": {
+      "created": "A new Concept Name Tag Map is created with identifier {{ param }}",
+      "updated": "A Concept Name Tag Map is updated with identifier {{ param }}",
+      "deleted": "A Concept Name Tag Map is deleted with identifier {{ param }}"
+    }
+  }
+}

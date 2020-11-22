@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "conceptsConceptComplex": {
+      "home": {
+        "title": "ConceptComplexes",
+        "createLabel": "Créer un nouveau Concept Complex",
+        "createOrEditLabel": "Créer ou éditer un Concept Complex",
+        "notFound": "Aucun Concept Complex trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Concept Complex {{ id }} ?"
+      },
+      "detail": {
+        "title": "Concept Complex"
+      },
+      "uuid": "Uuid",
+      "handler": "Handler"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConceptComplex": {
+      "created": "Un nouveau Concept Complex a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Concept Complex avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Concept Complex avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

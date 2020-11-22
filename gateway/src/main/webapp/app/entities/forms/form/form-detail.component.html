@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="form">
+            <h2><span jhiTranslate="gatewayApp.formsForm.detail.title">Form</span> {{ form.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.formsForm.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{ form.uuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsForm.name">Name</span></dt>
+                <dd>
+                    <span>{{ form.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsForm.version">Version</span></dt>
+                <dd>
+                    <span>{{ form.version }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsForm.build">Build</span></dt>
+                <dd>
+                    <span>{{ form.build }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsForm.published">Published</span></dt>
+                <dd>
+                    <span>{{ form.published }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsForm.description">Description</span></dt>
+                <dd>
+                    <span>{{ form.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsForm.encounterType">Encounter Type</span></dt>
+                <dd>
+                    <span>{{ form.encounterType }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsForm.template">Template</span></dt>
+                <dd>
+                    <span>{{ form.template }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsForm.xslt">Xslt</span></dt>
+                <dd>
+                    <span>{{ form.xslt }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/form', form.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

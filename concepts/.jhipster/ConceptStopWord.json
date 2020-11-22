@@ -1,0 +1,31 @@
+{
+  "name": "ConceptStopWord",
+  "fields": [
+    {
+      "fieldName": "uuid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "word",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "locale",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201122081309",
+  "entityTableName": "concept_stop_word",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["concepts"],
+  "microserviceName": "concepts"
+}

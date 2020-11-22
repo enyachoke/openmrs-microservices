@@ -1,0 +1,55 @@
+{
+  "name": "DrugOrder",
+  "fields": [
+    {
+      "fieldName": "uuid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "drugInventoryUuid",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "dose",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "equivalentDailyDose",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "units",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "frequency",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prn",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "complex",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201122075409",
+  "entityTableName": "drug_order",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["gateway", "orders"],
+  "microserviceName": "orders"
+}

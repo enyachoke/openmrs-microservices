@@ -1,0 +1,12 @@
+version: '2'
+services:
+  concepts-postgresql:
+    image: postgres:12.3
+    # volumes:
+    #     - ~/volumes/jhipster/concepts/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=concepts
+      - POSTGRES_PASSWORD=
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5432:5432

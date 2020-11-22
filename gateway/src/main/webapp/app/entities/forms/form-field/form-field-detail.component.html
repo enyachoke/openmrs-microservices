@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="formField">
+            <h2><span jhiTranslate="gatewayApp.formsFormField.detail.title">Form Field</span> {{ formField.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.formsFormField.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{ formField.uuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsFormField.name">Name</span></dt>
+                <dd>
+                    <span>{{ formField.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsFormField.fieldNumber">Field Number</span></dt>
+                <dd>
+                    <span>{{ formField.fieldNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsFormField.fieldPart">Field Part</span></dt>
+                <dd>
+                    <span>{{ formField.fieldPart }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsFormField.pageNumber">Page Number</span></dt>
+                <dd>
+                    <span>{{ formField.pageNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsFormField.minOccurs">Min Occurs</span></dt>
+                <dd>
+                    <span>{{ formField.minOccurs }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsFormField.maxOccurs">Max Occurs</span></dt>
+                <dd>
+                    <span>{{ formField.maxOccurs }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsFormField.isRequired">Is Required</span></dt>
+                <dd>
+                    <span>{{ formField.isRequired }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsFormField.sortWeight">Sort Weight</span></dt>
+                <dd>
+                    <span>{{ formField.sortWeight }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/form-field', formField.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+{
+  "name": "Order",
+  "fields": [
+    {
+      "fieldName": "uuid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "conceptUuid",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "ordererUuid",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "encounterUuid",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "instructions",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "autoExpireDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "discontinued",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "discontinuedDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "accessionNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "discontinuedReasonNonCoded",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "patientUuid",
+      "fieldType": "UUID"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201122075209",
+  "entityTableName": "order",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["gateway", "orders"],
+  "microserviceName": "orders"
+}

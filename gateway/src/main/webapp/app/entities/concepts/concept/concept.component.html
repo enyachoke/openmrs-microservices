@@ -1,0 +1,71 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="gatewayApp.conceptsConcept.home.title">Concepts</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-concept" [routerLink]="['/concept/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="gatewayApp.conceptsConcept.home.createLabel">
+            Create a new Concept
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="concepts?.length === 0">
+        <span jhiTranslate="gatewayApp.conceptsConcept.home.notFound">No concepts found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="concepts && concepts.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConcept.uuid">Uuid</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConcept.shortName">Short Name</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConcept.description">Description</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConcept.formText">Form Text</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConcept.version">Version</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConcept.isSet">Is Set</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let concept of concepts ;trackBy: trackId">
+                    <td><a [routerLink]="['/concept', concept.id, 'view']">{{ concept.id }}</a></td>
+                    <td>{{ concept.uuid }}</td>
+                    <td>{{ concept.shortName }}</td>
+                    <td>{{ concept.description }}</td>
+                    <td>{{ concept.formText }}</td>
+                    <td>{{ concept.version }}</td>
+                    <td>{{ concept.isSet }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/concept', concept.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/concept', concept.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(concept)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

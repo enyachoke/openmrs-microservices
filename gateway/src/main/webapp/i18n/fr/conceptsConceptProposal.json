@@ -1,0 +1,34 @@
+{
+  "gatewayApp": {
+    "conceptsConceptProposal": {
+      "home": {
+        "title": "ConceptProposals",
+        "createLabel": "Créer un nouveau Concept Proposal",
+        "createOrEditLabel": "Créer ou éditer un Concept Proposal",
+        "notFound": "Aucun Concept Proposal trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Concept Proposal {{ id }} ?"
+      },
+      "detail": {
+        "title": "Concept Proposal"
+      },
+      "uuid": "Uuid",
+      "encounter": "Encounter",
+      "originalText": "Original Text",
+      "finalText": "Final Text",
+      "obsUuid": "Obs Uuid",
+      "obsConceptUuid": "Obs Concept Uuid",
+      "state": "State",
+      "comments": "Comments",
+      "locale": "Locale"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConceptProposal": {
+      "created": "Un nouveau Concept Proposal a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Concept Proposal avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Concept Proposal avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

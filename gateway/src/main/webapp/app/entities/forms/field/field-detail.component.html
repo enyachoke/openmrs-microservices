@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="field">
+            <h2><span jhiTranslate="gatewayApp.formsField.detail.title">Field</span> {{ field.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.formsField.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{ field.uuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsField.name">Name</span></dt>
+                <dd>
+                    <span>{{ field.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsField.description">Description</span></dt>
+                <dd>
+                    <span>{{ field.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsField.conceptUuid">Concept Uuid</span></dt>
+                <dd>
+                    <span>{{ field.conceptUuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsField.tableName">Table Name</span></dt>
+                <dd>
+                    <span>{{ field.tableName }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsField.attributesName">Attributes Name</span></dt>
+                <dd>
+                    <span>{{ field.attributesName }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsField.defaultValue">Default Value</span></dt>
+                <dd>
+                    <span>{{ field.defaultValue }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsField.selectMultiple">Select Multiple</span></dt>
+                <dd>
+                    <span>{{ field.selectMultiple }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/field', field.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

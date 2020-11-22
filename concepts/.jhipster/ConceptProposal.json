@@ -1,0 +1,55 @@
+{
+  "name": "ConceptProposal",
+  "fields": [
+    {
+      "fieldName": "uuid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "encounter",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "originalText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "finalText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "obsUuid",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "obsConceptUuid",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "state",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "comments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "locale",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201122080609",
+  "entityTableName": "concept_proposal",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["gateway", "concepts"],
+  "microserviceName": "concepts"
+}

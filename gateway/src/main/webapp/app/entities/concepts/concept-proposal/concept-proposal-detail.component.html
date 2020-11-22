@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="conceptProposal">
+            <h2><span jhiTranslate="gatewayApp.conceptsConceptProposal.detail.title">Concept Proposal</span> {{ conceptProposal.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptProposal.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{ conceptProposal.uuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptProposal.encounter">Encounter</span></dt>
+                <dd>
+                    <span>{{ conceptProposal.encounter }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptProposal.originalText">Original Text</span></dt>
+                <dd>
+                    <span>{{ conceptProposal.originalText }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptProposal.finalText">Final Text</span></dt>
+                <dd>
+                    <span>{{ conceptProposal.finalText }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptProposal.obsUuid">Obs Uuid</span></dt>
+                <dd>
+                    <span>{{ conceptProposal.obsUuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptProposal.obsConceptUuid">Obs Concept Uuid</span></dt>
+                <dd>
+                    <span>{{ conceptProposal.obsConceptUuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptProposal.state">State</span></dt>
+                <dd>
+                    <span>{{ conceptProposal.state }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptProposal.comments">Comments</span></dt>
+                <dd>
+                    <span>{{ conceptProposal.comments }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptProposal.locale">Locale</span></dt>
+                <dd>
+                    <span>{{ conceptProposal.locale }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/concept-proposal', conceptProposal.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

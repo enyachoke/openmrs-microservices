@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="conceptDescription">
+            <h2><span jhiTranslate="gatewayApp.conceptsConceptDescription.detail.title">Concept Description</span> {{ conceptDescription.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptDescription.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{ conceptDescription.uuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptDescription.description">Description</span></dt>
+                <dd>
+                    <span>{{ conceptDescription.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptDescription.locale">Locale</span></dt>
+                <dd>
+                    <span>{{ conceptDescription.locale }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/concept-description', conceptDescription.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

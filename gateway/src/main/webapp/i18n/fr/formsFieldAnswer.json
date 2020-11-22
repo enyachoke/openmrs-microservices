@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "formsFieldAnswer": {
+      "home": {
+        "title": "FieldAnswers",
+        "createLabel": "Créer un nouveau Field Answer",
+        "createOrEditLabel": "Créer ou éditer un Field Answer",
+        "notFound": "Aucun Field Answer trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Field Answer {{ id }} ?"
+      },
+      "detail": {
+        "title": "Field Answer"
+      },
+      "uuid": "Uuid"
+    }
+  },
+  "formsApp": {
+    "formsFieldAnswer": {
+      "created": "Un nouveau Field Answer a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Field Answer avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Field Answer avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

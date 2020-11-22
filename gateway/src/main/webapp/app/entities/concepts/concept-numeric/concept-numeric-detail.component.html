@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="conceptNumeric">
+            <h2><span jhiTranslate="gatewayApp.conceptsConceptNumeric.detail.title">Concept Numeric</span> {{ conceptNumeric.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptNumeric.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{ conceptNumeric.uuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptNumeric.hiAbsolute">Hi Absolute</span></dt>
+                <dd>
+                    <span>{{ conceptNumeric.hiAbsolute }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptNumeric.hiNormal">Hi Normal</span></dt>
+                <dd>
+                    <span>{{ conceptNumeric.hiNormal }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptNumeric.hiCritical">Hi Critical</span></dt>
+                <dd>
+                    <span>{{ conceptNumeric.hiCritical }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptNumeric.lowAbsolute">Low Absolute</span></dt>
+                <dd>
+                    <span>{{ conceptNumeric.lowAbsolute }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptNumeric.lowNormal">Low Normal</span></dt>
+                <dd>
+                    <span>{{ conceptNumeric.lowNormal }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptNumeric.lowCritical">Low Critical</span></dt>
+                <dd>
+                    <span>{{ conceptNumeric.lowCritical }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptNumeric.units">Units</span></dt>
+                <dd>
+                    <span>{{ conceptNumeric.units }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptNumeric.precise">Precise</span></dt>
+                <dd>
+                    <span>{{ conceptNumeric.precise }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/concept-numeric', conceptNumeric.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

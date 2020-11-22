@@ -1,0 +1,34 @@
+{
+  "gatewayApp": {
+    "formsFormField": {
+      "home": {
+        "title": "Form Fields",
+        "createLabel": "Create a new Form Field",
+        "createOrEditLabel": "Create or edit a Form Field",
+        "notFound": "No Form Fields found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Form Field {{ id }}?"
+      },
+      "detail": {
+        "title": "Form Field"
+      },
+      "uuid": "Uuid",
+      "name": "Name",
+      "fieldNumber": "Field Number",
+      "fieldPart": "Field Part",
+      "pageNumber": "Page Number",
+      "minOccurs": "Min Occurs",
+      "maxOccurs": "Max Occurs",
+      "isRequired": "Is Required",
+      "sortWeight": "Sort Weight"
+    }
+  },
+  "formsApp": {
+    "formsFormField": {
+      "created": "A new Form Field is created with identifier {{ param }}",
+      "updated": "A Form Field is updated with identifier {{ param }}",
+      "deleted": "A Form Field is deleted with identifier {{ param }}"
+    }
+  }
+}

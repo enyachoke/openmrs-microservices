@@ -1,0 +1,34 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="conceptSet">
+            <h2><span jhiTranslate="gatewayApp.conceptsConceptSet.detail.title">Concept Set</span> {{ conceptSet.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptSet.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{ conceptSet.uuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptSet.sortWeight">Sort Weight</span></dt>
+                <dd>
+                    <span>{{ conceptSet.sortWeight }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/concept-set', conceptSet.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+{
+  "gatewayApp": {
+    "conceptsConceptReferenceTerm": {
+      "home": {
+        "title": "Concept Reference Terms",
+        "createLabel": "Create a new Concept Reference Term",
+        "createOrEditLabel": "Create or edit a Concept Reference Term",
+        "notFound": "No Concept Reference Terms found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Concept Reference Term {{ id }}?"
+      },
+      "detail": {
+        "title": "Concept Reference Term"
+      },
+      "uuid": "Uuid",
+      "name": "Name",
+      "code": "Code",
+      "version": "Version",
+      "description": "Description"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConceptReferenceTerm": {
+      "created": "A new Concept Reference Term is created with identifier {{ param }}",
+      "updated": "A Concept Reference Term is updated with identifier {{ param }}",
+      "deleted": "A Concept Reference Term is deleted with identifier {{ param }}"
+    }
+  }
+}

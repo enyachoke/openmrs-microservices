@@ -1,0 +1,51 @@
+{
+  "name": "Field",
+  "fields": [
+    {
+      "fieldName": "uuid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "conceptUuid",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "tableName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attributesName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "defaultValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "selectMultiple",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201122075109",
+  "entityTableName": "field",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["gateway", "forms"],
+  "microserviceName": "forms"
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Drug",
+  "fields": [
+    {
+      "fieldName": "uuid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "combination",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "dosageForm",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "doseStrength",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "maximumDailyDose",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "minimumDailyDose",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "route",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "units",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201122081509",
+  "entityTableName": "drug",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["concepts"],
+  "microserviceName": "concepts"
+}

@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="conceptNameTag">
+            <h2><span jhiTranslate="gatewayApp.conceptsConceptNameTag.detail.title">Concept Name Tag</span> {{ conceptNameTag.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptNameTag.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{ conceptNameTag.uuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptNameTag.tag">Tag</span></dt>
+                <dd>
+                    <span>{{ conceptNameTag.tag }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptNameTag.description">Description</span></dt>
+                <dd>
+                    <span>{{ conceptNameTag.description }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/concept-name-tag', conceptNameTag.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

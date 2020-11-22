@@ -1,0 +1,34 @@
+{
+  "gatewayApp": {
+    "formsForm": {
+      "home": {
+        "title": "Forms",
+        "createLabel": "Create a new Form",
+        "createOrEditLabel": "Create or edit a Form",
+        "notFound": "No Forms found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Form {{ id }}?"
+      },
+      "detail": {
+        "title": "Form"
+      },
+      "uuid": "Uuid",
+      "name": "Name",
+      "version": "Version",
+      "build": "Build",
+      "published": "Published",
+      "description": "Description",
+      "encounterType": "Encounter Type",
+      "template": "Template",
+      "xslt": "Xslt"
+    }
+  },
+  "formsApp": {
+    "formsForm": {
+      "created": "A new Form is created with identifier {{ param }}",
+      "updated": "A Form is updated with identifier {{ param }}",
+      "deleted": "A Form is deleted with identifier {{ param }}"
+    }
+  }
+}

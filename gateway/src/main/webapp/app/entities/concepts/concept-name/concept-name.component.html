@@ -1,0 +1,67 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="gatewayApp.conceptsConceptName.home.title">Concept Names</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-concept-name" [routerLink]="['/concept-name/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="gatewayApp.conceptsConceptName.home.createLabel">
+            Create a new Concept Name
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="conceptNames?.length === 0">
+        <span jhiTranslate="gatewayApp.conceptsConceptName.home.notFound">No conceptNames found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="conceptNames && conceptNames.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConceptName.uuid">Uuid</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConceptName.name">Name</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConceptName.locale">Locale</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConceptName.conceptNameType">Concept Name Type</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let conceptName of conceptNames ;trackBy: trackId">
+                    <td><a [routerLink]="['/concept-name', conceptName.id, 'view']">{{ conceptName.id }}</a></td>
+                    <td>{{ conceptName.uuid }}</td>
+                    <td>{{ conceptName.name }}</td>
+                    <td>{{ conceptName.locale }}</td>
+                    <td>{{ conceptName.conceptNameType }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/concept-name', conceptName.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/concept-name', conceptName.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(conceptName)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

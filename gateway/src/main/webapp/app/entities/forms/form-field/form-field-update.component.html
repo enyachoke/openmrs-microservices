@@ -1,0 +1,86 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-form-field-heading" jhiTranslate="gatewayApp.formsFormField.home.createOrEditLabel">Create or edit a Form Field</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.formsFormField.uuid" for="field_uuid">Uuid</label>
+                    <input type="text" class="form-control" name="uuid" id="field_uuid"
+                           formControlName="uuid"/>
+                    <div *ngIf="editForm.get('uuid')!.invalid && (editForm.get('uuid')!.dirty || editForm.get('uuid')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('uuid')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.formsFormField.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           formControlName="name"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.formsFormField.fieldNumber" for="field_fieldNumber">Field Number</label>
+                    <input type="number" class="form-control" name="fieldNumber" id="field_fieldNumber"
+                           formControlName="fieldNumber"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.formsFormField.fieldPart" for="field_fieldPart">Field Part</label>
+                    <input type="text" class="form-control" name="fieldPart" id="field_fieldPart"
+                           formControlName="fieldPart"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.formsFormField.pageNumber" for="field_pageNumber">Page Number</label>
+                    <input type="number" class="form-control" name="pageNumber" id="field_pageNumber"
+                           formControlName="pageNumber"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.formsFormField.minOccurs" for="field_minOccurs">Min Occurs</label>
+                    <input type="number" class="form-control" name="minOccurs" id="field_minOccurs"
+                           formControlName="minOccurs"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.formsFormField.maxOccurs" for="field_maxOccurs">Max Occurs</label>
+                    <input type="number" class="form-control" name="maxOccurs" id="field_maxOccurs"
+                           formControlName="maxOccurs"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.formsFormField.isRequired" for="field_isRequired">Is Required</label>
+                    <input type="checkbox" class="form-control" name="isRequired" id="field_isRequired"
+                           formControlName="isRequired"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.formsFormField.sortWeight" for="field_sortWeight">Sort Weight</label>
+                    <input type="number" class="form-control" name="sortWeight" id="field_sortWeight"
+                           formControlName="sortWeight"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

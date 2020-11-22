@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "conceptsConceptNameTag": {
+      "home": {
+        "title": "Concept Name Tags",
+        "createLabel": "Create a new Concept Name Tag",
+        "createOrEditLabel": "Create or edit a Concept Name Tag",
+        "notFound": "No Concept Name Tags found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Concept Name Tag {{ id }}?"
+      },
+      "detail": {
+        "title": "Concept Name Tag"
+      },
+      "uuid": "Uuid",
+      "tag": "Tag",
+      "description": "Description"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConceptNameTag": {
+      "created": "A new Concept Name Tag is created with identifier {{ param }}",
+      "updated": "A Concept Name Tag is updated with identifier {{ param }}",
+      "deleted": "A Concept Name Tag is deleted with identifier {{ param }}"
+    }
+  }
+}

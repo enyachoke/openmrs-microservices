@@ -1,0 +1,33 @@
+{
+  "gatewayApp": {
+    "formsField": {
+      "home": {
+        "title": "Fields",
+        "createLabel": "Create a new Field",
+        "createOrEditLabel": "Create or edit a Field",
+        "notFound": "No Fields found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Field {{ id }}?"
+      },
+      "detail": {
+        "title": "Field"
+      },
+      "uuid": "Uuid",
+      "name": "Name",
+      "description": "Description",
+      "conceptUuid": "Concept Uuid",
+      "tableName": "Table Name",
+      "attributesName": "Attributes Name",
+      "defaultValue": "Default Value",
+      "selectMultiple": "Select Multiple"
+    }
+  },
+  "formsApp": {
+    "formsField": {
+      "created": "A new Field is created with identifier {{ param }}",
+      "updated": "A Field is updated with identifier {{ param }}",
+      "deleted": "A Field is deleted with identifier {{ param }}"
+    }
+  }
+}

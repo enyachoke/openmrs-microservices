@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "formsFieldAnswer": {
+      "home": {
+        "title": "Field Answers",
+        "createLabel": "Create a new Field Answer",
+        "createOrEditLabel": "Create or edit a Field Answer",
+        "notFound": "No Field Answers found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Field Answer {{ id }}?"
+      },
+      "detail": {
+        "title": "Field Answer"
+      },
+      "uuid": "Uuid"
+    }
+  },
+  "formsApp": {
+    "formsFieldAnswer": {
+      "created": "A new Field Answer is created with identifier {{ param }}",
+      "updated": "A Field Answer is updated with identifier {{ param }}",
+      "deleted": "A Field Answer is deleted with identifier {{ param }}"
+    }
+  }
+}

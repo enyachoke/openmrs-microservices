@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="drugOrder">
+            <h2><span jhiTranslate="gatewayApp.ordersDrugOrder.detail.title">Drug Order</span> {{ drugOrder.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.ordersDrugOrder.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{ drugOrder.uuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersDrugOrder.drugInventoryUuid">Drug Inventory Uuid</span></dt>
+                <dd>
+                    <span>{{ drugOrder.drugInventoryUuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersDrugOrder.dose">Dose</span></dt>
+                <dd>
+                    <span>{{ drugOrder.dose }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersDrugOrder.equivalentDailyDose">Equivalent Daily Dose</span></dt>
+                <dd>
+                    <span>{{ drugOrder.equivalentDailyDose }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersDrugOrder.units">Units</span></dt>
+                <dd>
+                    <span>{{ drugOrder.units }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersDrugOrder.frequency">Frequency</span></dt>
+                <dd>
+                    <span>{{ drugOrder.frequency }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersDrugOrder.prn">Prn</span></dt>
+                <dd>
+                    <span>{{ drugOrder.prn }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersDrugOrder.complex">Complex</span></dt>
+                <dd>
+                    <span>{{ drugOrder.complex }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersDrugOrder.quantity">Quantity</span></dt>
+                <dd>
+                    <span>{{ drugOrder.quantity }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/drug-order', drugOrder.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

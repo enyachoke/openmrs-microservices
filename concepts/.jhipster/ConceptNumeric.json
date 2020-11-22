@@ -1,0 +1,55 @@
+{
+  "name": "ConceptNumeric",
+  "fields": [
+    {
+      "fieldName": "uuid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "hiAbsolute",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "hiNormal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "hiCritical",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "lowAbsolute",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "lowNormal",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "lowCritical",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "units",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "precise",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201122075909",
+  "entityTableName": "concept_numeric",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["gateway", "concepts"],
+  "microserviceName": "concepts"
+}

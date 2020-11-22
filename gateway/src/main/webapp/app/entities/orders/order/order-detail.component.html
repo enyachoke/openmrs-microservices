@@ -1,0 +1,74 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="order">
+            <h2><span jhiTranslate="gatewayApp.ordersOrder.detail.title">Order</span> {{ order.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.ordersOrder.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{ order.uuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersOrder.conceptUuid">Concept Uuid</span></dt>
+                <dd>
+                    <span>{{ order.conceptUuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersOrder.ordererUuid">Orderer Uuid</span></dt>
+                <dd>
+                    <span>{{ order.ordererUuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersOrder.encounterUuid">Encounter Uuid</span></dt>
+                <dd>
+                    <span>{{ order.encounterUuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersOrder.instructions">Instructions</span></dt>
+                <dd>
+                    <span>{{ order.instructions }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersOrder.startDate">Start Date</span></dt>
+                <dd>
+                    <span>{{ order.startDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersOrder.autoExpireDate">Auto Expire Date</span></dt>
+                <dd>
+                    <span>{{ order.autoExpireDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersOrder.discontinued">Discontinued</span></dt>
+                <dd>
+                    <span>{{ order.discontinued }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersOrder.discontinuedDate">Discontinued Date</span></dt>
+                <dd>
+                    <span>{{ order.discontinuedDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersOrder.accessionNumber">Accession Number</span></dt>
+                <dd>
+                    <span>{{ order.accessionNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersOrder.discontinuedReasonNonCoded">Discontinued Reason Non Coded</span></dt>
+                <dd>
+                    <span>{{ order.discontinuedReasonNonCoded }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.ordersOrder.patientUuid">Patient Uuid</span></dt>
+                <dd>
+                    <span>{{ order.patientUuid }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/order', order.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

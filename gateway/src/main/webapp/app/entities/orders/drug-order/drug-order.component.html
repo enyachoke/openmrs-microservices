@@ -1,0 +1,77 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="gatewayApp.ordersDrugOrder.home.title">Drug Orders</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-drug-order" [routerLink]="['/drug-order/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="gatewayApp.ordersDrugOrder.home.createLabel">
+            Create a new Drug Order
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="drugOrders?.length === 0">
+        <span jhiTranslate="gatewayApp.ordersDrugOrder.home.notFound">No drugOrders found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="drugOrders && drugOrders.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.ordersDrugOrder.uuid">Uuid</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.ordersDrugOrder.drugInventoryUuid">Drug Inventory Uuid</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.ordersDrugOrder.dose">Dose</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.ordersDrugOrder.equivalentDailyDose">Equivalent Daily Dose</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.ordersDrugOrder.units">Units</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.ordersDrugOrder.frequency">Frequency</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.ordersDrugOrder.prn">Prn</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.ordersDrugOrder.complex">Complex</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.ordersDrugOrder.quantity">Quantity</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let drugOrder of drugOrders ;trackBy: trackId">
+                    <td><a [routerLink]="['/drug-order', drugOrder.id, 'view']">{{ drugOrder.id }}</a></td>
+                    <td>{{ drugOrder.uuid }}</td>
+                    <td>{{ drugOrder.drugInventoryUuid }}</td>
+                    <td>{{ drugOrder.dose }}</td>
+                    <td>{{ drugOrder.equivalentDailyDose }}</td>
+                    <td>{{ drugOrder.units }}</td>
+                    <td>{{ drugOrder.frequency }}</td>
+                    <td>{{ drugOrder.prn }}</td>
+                    <td>{{ drugOrder.complex }}</td>
+                    <td>{{ drugOrder.quantity }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/drug-order', drugOrder.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/drug-order', drugOrder.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(drugOrder)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

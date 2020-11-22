@@ -1,0 +1,86 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-concept-proposal-heading" jhiTranslate="gatewayApp.conceptsConceptProposal.home.createOrEditLabel">Create or edit a Concept Proposal</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.conceptsConceptProposal.uuid" for="field_uuid">Uuid</label>
+                    <input type="text" class="form-control" name="uuid" id="field_uuid"
+                           formControlName="uuid"/>
+                    <div *ngIf="editForm.get('uuid')!.invalid && (editForm.get('uuid')!.dirty || editForm.get('uuid')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('uuid')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.conceptsConceptProposal.encounter" for="field_encounter">Encounter</label>
+                    <input type="text" class="form-control" name="encounter" id="field_encounter"
+                           formControlName="encounter"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.conceptsConceptProposal.originalText" for="field_originalText">Original Text</label>
+                    <input type="text" class="form-control" name="originalText" id="field_originalText"
+                           formControlName="originalText"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.conceptsConceptProposal.finalText" for="field_finalText">Final Text</label>
+                    <input type="text" class="form-control" name="finalText" id="field_finalText"
+                           formControlName="finalText"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.conceptsConceptProposal.obsUuid" for="field_obsUuid">Obs Uuid</label>
+                    <input type="text" class="form-control" name="obsUuid" id="field_obsUuid"
+                           formControlName="obsUuid"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.conceptsConceptProposal.obsConceptUuid" for="field_obsConceptUuid">Obs Concept Uuid</label>
+                    <input type="text" class="form-control" name="obsConceptUuid" id="field_obsConceptUuid"
+                           formControlName="obsConceptUuid"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.conceptsConceptProposal.state" for="field_state">State</label>
+                    <input type="text" class="form-control" name="state" id="field_state"
+                           formControlName="state"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.conceptsConceptProposal.comments" for="field_comments">Comments</label>
+                    <input type="text" class="form-control" name="comments" id="field_comments"
+                           formControlName="comments"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.conceptsConceptProposal.locale" for="field_locale">Locale</label>
+                    <input type="text" class="form-control" name="locale" id="field_locale"
+                           formControlName="locale"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

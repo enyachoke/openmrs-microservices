@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "conceptsConceptDescription": {
+      "home": {
+        "title": "Concept Descriptions",
+        "createLabel": "Create a new Concept Description",
+        "createOrEditLabel": "Create or edit a Concept Description",
+        "notFound": "No Concept Descriptions found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Concept Description {{ id }}?"
+      },
+      "detail": {
+        "title": "Concept Description"
+      },
+      "uuid": "Uuid",
+      "description": "Description",
+      "locale": "Locale"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConceptDescription": {
+      "created": "A new Concept Description is created with identifier {{ param }}",
+      "updated": "A Concept Description is updated with identifier {{ param }}",
+      "deleted": "A Concept Description is deleted with identifier {{ param }}"
+    }
+  }
+}

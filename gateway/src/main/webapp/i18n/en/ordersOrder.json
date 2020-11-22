@@ -1,0 +1,37 @@
+{
+  "gatewayApp": {
+    "ordersOrder": {
+      "home": {
+        "title": "Orders",
+        "createLabel": "Create a new Order",
+        "createOrEditLabel": "Create or edit a Order",
+        "notFound": "No Orders found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Order {{ id }}?"
+      },
+      "detail": {
+        "title": "Order"
+      },
+      "uuid": "Uuid",
+      "conceptUuid": "Concept Uuid",
+      "ordererUuid": "Orderer Uuid",
+      "encounterUuid": "Encounter Uuid",
+      "instructions": "Instructions",
+      "startDate": "Start Date",
+      "autoExpireDate": "Auto Expire Date",
+      "discontinued": "Discontinued",
+      "discontinuedDate": "Discontinued Date",
+      "accessionNumber": "Accession Number",
+      "discontinuedReasonNonCoded": "Discontinued Reason Non Coded",
+      "patientUuid": "Patient Uuid"
+    }
+  },
+  "ordersApp": {
+    "ordersOrder": {
+      "created": "A new Order is created with identifier {{ param }}",
+      "updated": "A Order is updated with identifier {{ param }}",
+      "deleted": "A Order is deleted with identifier {{ param }}"
+    }
+  }
+}

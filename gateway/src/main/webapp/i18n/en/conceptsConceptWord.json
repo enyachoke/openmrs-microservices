@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "conceptsConceptWord": {
+      "home": {
+        "title": "Concept Words",
+        "createLabel": "Create a new Concept Word",
+        "createOrEditLabel": "Create or edit a Concept Word",
+        "notFound": "No Concept Words found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Concept Word {{ id }}?"
+      },
+      "detail": {
+        "title": "Concept Word"
+      },
+      "uuid": "Uuid",
+      "word": "Word",
+      "locale": "Locale",
+      "weight": "Weight"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConceptWord": {
+      "created": "A new Concept Word is created with identifier {{ param }}",
+      "updated": "A Concept Word is updated with identifier {{ param }}",
+      "deleted": "A Concept Word is deleted with identifier {{ param }}"
+    }
+  }
+}

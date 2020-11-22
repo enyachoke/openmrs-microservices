@@ -1,0 +1,77 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="gatewayApp.formsFormField.home.title">Form Fields</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-form-field" [routerLink]="['/form-field/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="gatewayApp.formsFormField.home.createLabel">
+            Create a new Form Field
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="formFields?.length === 0">
+        <span jhiTranslate="gatewayApp.formsFormField.home.notFound">No formFields found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="formFields && formFields.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.formsFormField.uuid">Uuid</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.formsFormField.name">Name</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.formsFormField.fieldNumber">Field Number</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.formsFormField.fieldPart">Field Part</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.formsFormField.pageNumber">Page Number</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.formsFormField.minOccurs">Min Occurs</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.formsFormField.maxOccurs">Max Occurs</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.formsFormField.isRequired">Is Required</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.formsFormField.sortWeight">Sort Weight</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let formField of formFields ;trackBy: trackId">
+                    <td><a [routerLink]="['/form-field', formField.id, 'view']">{{ formField.id }}</a></td>
+                    <td>{{ formField.uuid }}</td>
+                    <td>{{ formField.name }}</td>
+                    <td>{{ formField.fieldNumber }}</td>
+                    <td>{{ formField.fieldPart }}</td>
+                    <td>{{ formField.pageNumber }}</td>
+                    <td>{{ formField.minOccurs }}</td>
+                    <td>{{ formField.maxOccurs }}</td>
+                    <td>{{ formField.isRequired }}</td>
+                    <td>{{ formField.sortWeight }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/form-field', formField.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/form-field', formField.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(formField)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

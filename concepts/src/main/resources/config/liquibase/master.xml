@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql, mariadb"/>
+    <property name="clobType" value="longvarchar" dbms="h2"/>
+    <property name="clobType" value="clob" dbms="mysql, oracle, mssql, mariadb, postgresql"/>
+    <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122075509_added_entity_Concept.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122075609_added_entity_ConceptName.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122075709_added_entity_ConceptDescription.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122075809_added_entity_ConceptSet.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122075909_added_entity_ConceptNumeric.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122080009_added_entity_ConceptComplex.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122080109_added_entity_ConceptAnswer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122080209_added_entity_ConceptNameTag.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122080309_added_entity_ConceptWord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122080409_added_entity_ConceptProposalTagMap.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122080509_added_entity_ConceptNameTagMap.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122080609_added_entity_ConceptProposal.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122080709_added_entity_ConceptReferenceTerm.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122080809_added_entity_ConceptReferenceSource.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122080909_added_entity_ConceptProposalReferenceMap.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122081009_added_entity_ConceptDataType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122081309_added_entity_ConceptStopWord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122081409_added_entity_ConceptClass.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20201122081509_added_entity_Drug.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+</databaseChangeLog>

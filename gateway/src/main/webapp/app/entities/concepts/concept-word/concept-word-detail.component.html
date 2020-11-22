@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="conceptWord">
+            <h2><span jhiTranslate="gatewayApp.conceptsConceptWord.detail.title">Concept Word</span> {{ conceptWord.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptWord.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{ conceptWord.uuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptWord.word">Word</span></dt>
+                <dd>
+                    <span>{{ conceptWord.word }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptWord.locale">Locale</span></dt>
+                <dd>
+                    <span>{{ conceptWord.locale }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.conceptsConceptWord.weight">Weight</span></dt>
+                <dd>
+                    <span>{{ conceptWord.weight }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/concept-word', conceptWord.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

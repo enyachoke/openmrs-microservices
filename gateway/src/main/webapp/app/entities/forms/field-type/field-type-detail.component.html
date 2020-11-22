@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="fieldType">
+            <h2><span jhiTranslate="gatewayApp.formsFieldType.detail.title">Field Type</span> {{ fieldType.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.formsFieldType.uuid">Uuid</span></dt>
+                <dd>
+                    <span>{{ fieldType.uuid }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsFieldType.name">Name</span></dt>
+                <dd>
+                    <span>{{ fieldType.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsFieldType.description">Description</span></dt>
+                <dd>
+                    <span>{{ fieldType.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.formsFieldType.isSet">Is Set</span></dt>
+                <dd>
+                    <span>{{ fieldType.isSet }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/field-type', fieldType.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

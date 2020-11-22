@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "conceptsConceptAnswer": {
+      "home": {
+        "title": "Concept Answers",
+        "createLabel": "Create a new Concept Answer",
+        "createOrEditLabel": "Create or edit a Concept Answer",
+        "notFound": "No Concept Answers found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Concept Answer {{ id }}?"
+      },
+      "detail": {
+        "title": "Concept Answer"
+      },
+      "uuid": "Uuid",
+      "sortWeight": "Sort Weight"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConceptAnswer": {
+      "created": "A new Concept Answer is created with identifier {{ param }}",
+      "updated": "A Concept Answer is updated with identifier {{ param }}",
+      "deleted": "A Concept Answer is deleted with identifier {{ param }}"
+    }
+  }
+}

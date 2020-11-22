@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "conceptsConceptWord": {
+      "home": {
+        "title": "ConceptWords",
+        "createLabel": "Créer un nouveau Concept Word",
+        "createOrEditLabel": "Créer ou éditer un Concept Word",
+        "notFound": "Aucun Concept Word trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Concept Word {{ id }} ?"
+      },
+      "detail": {
+        "title": "Concept Word"
+      },
+      "uuid": "Uuid",
+      "word": "Word",
+      "locale": "Locale",
+      "weight": "Weight"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConceptWord": {
+      "created": "Un nouveau Concept Word a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Concept Word avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Concept Word avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

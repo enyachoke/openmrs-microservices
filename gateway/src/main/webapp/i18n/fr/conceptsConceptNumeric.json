@@ -1,0 +1,34 @@
+{
+  "gatewayApp": {
+    "conceptsConceptNumeric": {
+      "home": {
+        "title": "ConceptNumerics",
+        "createLabel": "Créer un nouveau Concept Numeric",
+        "createOrEditLabel": "Créer ou éditer un Concept Numeric",
+        "notFound": "Aucun Concept Numeric trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Concept Numeric {{ id }} ?"
+      },
+      "detail": {
+        "title": "Concept Numeric"
+      },
+      "uuid": "Uuid",
+      "hiAbsolute": "Hi Absolute",
+      "hiNormal": "Hi Normal",
+      "hiCritical": "Hi Critical",
+      "lowAbsolute": "Low Absolute",
+      "lowNormal": "Low Normal",
+      "lowCritical": "Low Critical",
+      "units": "Units",
+      "precise": "Precise"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConceptNumeric": {
+      "created": "Un nouveau Concept Numeric a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Concept Numeric avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Concept Numeric avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "formsFieldType": {
+      "home": {
+        "title": "Field Types",
+        "createLabel": "Create a new Field Type",
+        "createOrEditLabel": "Create or edit a Field Type",
+        "notFound": "No Field Types found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Field Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Field Type"
+      },
+      "uuid": "Uuid",
+      "name": "Name",
+      "description": "Description",
+      "isSet": "Is Set"
+    }
+  },
+  "formsApp": {
+    "formsFieldType": {
+      "created": "A new Field Type is created with identifier {{ param }}",
+      "updated": "A Field Type is updated with identifier {{ param }}",
+      "deleted": "A Field Type is deleted with identifier {{ param }}"
+    }
+  }
+}

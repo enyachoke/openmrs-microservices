@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "conceptsConceptSet": {
+      "home": {
+        "title": "Concept Sets",
+        "createLabel": "Create a new Concept Set",
+        "createOrEditLabel": "Create or edit a Concept Set",
+        "notFound": "No Concept Sets found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Concept Set {{ id }}?"
+      },
+      "detail": {
+        "title": "Concept Set"
+      },
+      "uuid": "Uuid",
+      "sortWeight": "Sort Weight"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConceptSet": {
+      "created": "A new Concept Set is created with identifier {{ param }}",
+      "updated": "A Concept Set is updated with identifier {{ param }}",
+      "deleted": "A Concept Set is deleted with identifier {{ param }}"
+    }
+  }
+}

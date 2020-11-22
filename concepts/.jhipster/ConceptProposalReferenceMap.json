@@ -1,0 +1,23 @@
+{
+  "name": "ConceptProposalReferenceMap",
+  "fields": [
+    {
+      "fieldName": "uuid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201122080909",
+  "entityTableName": "concept_proposal_reference_map",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["concepts"],
+  "microserviceName": "concepts"
+}

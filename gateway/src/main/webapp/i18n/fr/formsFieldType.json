@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "formsFieldType": {
+      "home": {
+        "title": "FieldTypes",
+        "createLabel": "Créer un nouveau Field Type",
+        "createOrEditLabel": "Créer ou éditer un Field Type",
+        "notFound": "Aucun Field Type trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Field Type {{ id }} ?"
+      },
+      "detail": {
+        "title": "Field Type"
+      },
+      "uuid": "Uuid",
+      "name": "Name",
+      "description": "Description",
+      "isSet": "Is Set"
+    }
+  },
+  "formsApp": {
+    "formsFieldType": {
+      "created": "Un nouveau Field Type a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Field Type avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Field Type avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

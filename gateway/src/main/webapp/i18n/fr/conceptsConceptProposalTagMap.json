@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "conceptsConceptProposalTagMap": {
+      "home": {
+        "title": "ConceptProposalTagMaps",
+        "createLabel": "Créer un nouveau Concept Proposal Tag Map",
+        "createOrEditLabel": "Créer ou éditer un Concept Proposal Tag Map",
+        "notFound": "Aucun Concept Proposal Tag Map trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Concept Proposal Tag Map {{ id }} ?"
+      },
+      "detail": {
+        "title": "Concept Proposal Tag Map"
+      },
+      "uuid": "Uuid"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConceptProposalTagMap": {
+      "created": "Un nouveau Concept Proposal Tag Map a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Concept Proposal Tag Map avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Concept Proposal Tag Map avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

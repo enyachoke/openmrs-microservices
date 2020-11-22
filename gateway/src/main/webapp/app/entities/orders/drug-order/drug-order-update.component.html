@@ -1,0 +1,86 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-drug-order-heading" jhiTranslate="gatewayApp.ordersDrugOrder.home.createOrEditLabel">Create or edit a Drug Order</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.ordersDrugOrder.uuid" for="field_uuid">Uuid</label>
+                    <input type="text" class="form-control" name="uuid" id="field_uuid"
+                           formControlName="uuid"/>
+                    <div *ngIf="editForm.get('uuid')!.invalid && (editForm.get('uuid')!.dirty || editForm.get('uuid')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('uuid')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.ordersDrugOrder.drugInventoryUuid" for="field_drugInventoryUuid">Drug Inventory Uuid</label>
+                    <input type="text" class="form-control" name="drugInventoryUuid" id="field_drugInventoryUuid"
+                           formControlName="drugInventoryUuid"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.ordersDrugOrder.dose" for="field_dose">Dose</label>
+                    <input type="number" class="form-control" name="dose" id="field_dose"
+                           formControlName="dose"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.ordersDrugOrder.equivalentDailyDose" for="field_equivalentDailyDose">Equivalent Daily Dose</label>
+                    <input type="number" class="form-control" name="equivalentDailyDose" id="field_equivalentDailyDose"
+                           formControlName="equivalentDailyDose"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.ordersDrugOrder.units" for="field_units">Units</label>
+                    <input type="text" class="form-control" name="units" id="field_units"
+                           formControlName="units"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.ordersDrugOrder.frequency" for="field_frequency">Frequency</label>
+                    <input type="text" class="form-control" name="frequency" id="field_frequency"
+                           formControlName="frequency"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.ordersDrugOrder.prn" for="field_prn">Prn</label>
+                    <input type="checkbox" class="form-control" name="prn" id="field_prn"
+                           formControlName="prn"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.ordersDrugOrder.complex" for="field_complex">Complex</label>
+                    <input type="checkbox" class="form-control" name="complex" id="field_complex"
+                           formControlName="complex"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gatewayApp.ordersDrugOrder.quantity" for="field_quantity">Quantity</label>
+                    <input type="number" class="form-control" name="quantity" id="field_quantity"
+                           formControlName="quantity"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

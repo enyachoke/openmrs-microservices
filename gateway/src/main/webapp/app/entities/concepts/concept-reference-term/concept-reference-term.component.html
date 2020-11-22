@@ -1,0 +1,69 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="gatewayApp.conceptsConceptReferenceTerm.home.title">Concept Reference Terms</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-concept-reference-term" [routerLink]="['/concept-reference-term/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="gatewayApp.conceptsConceptReferenceTerm.home.createLabel">
+            Create a new Concept Reference Term
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="conceptReferenceTerms?.length === 0">
+        <span jhiTranslate="gatewayApp.conceptsConceptReferenceTerm.home.notFound">No conceptReferenceTerms found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="conceptReferenceTerms && conceptReferenceTerms.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConceptReferenceTerm.uuid">Uuid</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConceptReferenceTerm.name">Name</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConceptReferenceTerm.code">Code</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConceptReferenceTerm.version">Version</span></th>
+                    <th scope="col" ><span jhiTranslate="gatewayApp.conceptsConceptReferenceTerm.description">Description</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let conceptReferenceTerm of conceptReferenceTerms ;trackBy: trackId">
+                    <td><a [routerLink]="['/concept-reference-term', conceptReferenceTerm.id, 'view']">{{ conceptReferenceTerm.id }}</a></td>
+                    <td>{{ conceptReferenceTerm.uuid }}</td>
+                    <td>{{ conceptReferenceTerm.name }}</td>
+                    <td>{{ conceptReferenceTerm.code }}</td>
+                    <td>{{ conceptReferenceTerm.version }}</td>
+                    <td>{{ conceptReferenceTerm.description }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/concept-reference-term', conceptReferenceTerm.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/concept-reference-term', conceptReferenceTerm.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(conceptReferenceTerm)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+{
+  "name": "FormField",
+  "fields": [
+    {
+      "fieldName": "uuid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fieldNumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "fieldPart",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pageNumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "minOccurs",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "maxOccurs",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isRequired",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "sortWeight",
+      "fieldType": "Float"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201122074809",
+  "entityTableName": "form_field",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["gateway", "forms"],
+  "microserviceName": "forms"
+}

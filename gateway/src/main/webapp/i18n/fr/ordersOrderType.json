@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "ordersOrderType": {
+      "home": {
+        "title": "OrderTypes",
+        "createLabel": "Créer un nouveau Order Type",
+        "createOrEditLabel": "Créer ou éditer un Order Type",
+        "notFound": "Aucun Order Type trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Order Type {{ id }} ?"
+      },
+      "detail": {
+        "title": "Order Type"
+      },
+      "uuid": "Uuid",
+      "name": "Name",
+      "description": "Description"
+    }
+  },
+  "ordersApp": {
+    "ordersOrderType": {
+      "created": "Un nouveau Order Type a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Order Type avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Order Type avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

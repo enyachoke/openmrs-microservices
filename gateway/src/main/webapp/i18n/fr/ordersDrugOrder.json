@@ -1,0 +1,34 @@
+{
+  "gatewayApp": {
+    "ordersDrugOrder": {
+      "home": {
+        "title": "DrugOrders",
+        "createLabel": "Créer un nouveau Drug Order",
+        "createOrEditLabel": "Créer ou éditer un Drug Order",
+        "notFound": "Aucun Drug Order trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Drug Order {{ id }} ?"
+      },
+      "detail": {
+        "title": "Drug Order"
+      },
+      "uuid": "Uuid",
+      "drugInventoryUuid": "Drug Inventory Uuid",
+      "dose": "Dose",
+      "equivalentDailyDose": "Equivalent Daily Dose",
+      "units": "Units",
+      "frequency": "Frequency",
+      "prn": "Prn",
+      "complex": "Complex",
+      "quantity": "Quantity"
+    }
+  },
+  "ordersApp": {
+    "ordersDrugOrder": {
+      "created": "Un nouveau Drug Order a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Drug Order avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Drug Order avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}

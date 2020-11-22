@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "conceptsConceptName": {
+      "home": {
+        "title": "Concept Names",
+        "createLabel": "Create a new Concept Name",
+        "createOrEditLabel": "Create or edit a Concept Name",
+        "notFound": "No Concept Names found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Concept Name {{ id }}?"
+      },
+      "detail": {
+        "title": "Concept Name"
+      },
+      "uuid": "Uuid",
+      "name": "Name",
+      "locale": "Locale",
+      "conceptNameType": "Concept Name Type"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConceptName": {
+      "created": "A new Concept Name is created with identifier {{ param }}",
+      "updated": "A Concept Name is updated with identifier {{ param }}",
+      "deleted": "A Concept Name is deleted with identifier {{ param }}"
+    }
+  }
+}

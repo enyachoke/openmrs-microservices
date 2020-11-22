@@ -1,0 +1,31 @@
+{
+  "gatewayApp": {
+    "conceptsConcept": {
+      "home": {
+        "title": "Concepts",
+        "createLabel": "Créer un nouveau Concept",
+        "createOrEditLabel": "Créer ou éditer un Concept",
+        "notFound": "Aucun Concept trouvé"
+      },
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Concept {{ id }} ?"
+      },
+      "detail": {
+        "title": "Concept"
+      },
+      "uuid": "Uuid",
+      "shortName": "Short Name",
+      "description": "Description",
+      "formText": "Form Text",
+      "version": "Version",
+      "isSet": "Is Set"
+    }
+  },
+  "conceptsApp": {
+    "conceptsConcept": {
+      "created": "Un nouveau Concept a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Concept avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Concept avec l'identifiant {{ param }} a été supprimé"
+    }
+  }
+}
