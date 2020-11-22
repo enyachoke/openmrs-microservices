@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: concepts
+  namespace: default
+  labels:
+    app: concepts
+spec:
+  selector:
+    app: concepts
+  ports:
+    - name: http
+      port: 8085

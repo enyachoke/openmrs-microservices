@@ -1,0 +1,15 @@
+{
+  "generator-jhipster": {
+    "deploymentType": "docker-compose",
+    "gatewayType": "zuul",
+    "monitoring": "no",
+    "directoryPath": "../",
+    "appsFolders": ["gateway", "forms", "orders", "concepts"],
+    "clusteredDbApps": [],
+    "consoleOptions": [],
+    "serviceDiscoveryType": "eureka",
+    "dockerRepositoryName": "enyachoke",
+    "dockerPushCommand": "docker push",
+    "jwtSecretKey": "ZTRiMDVkMmM1ZDRhNDVmNzU2NjQ4MDY3MDFiMDhkYzEwYWU3MGY0Njg4MjE0OWIxYjAxODdhZTRiNDU3YTZiZjRkNWRkMmNkMTM2ZjdjZWFhZDBhZDViZDljYmFkNmQ0ZmZjOQ=="
+  }
+}

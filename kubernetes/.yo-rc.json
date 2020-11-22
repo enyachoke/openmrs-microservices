@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "deploymentType": "kubernetes",
+    "gatewayType": "zuul",
+    "monitoring": "no",
+    "directoryPath": "../",
+    "appsFolders": ["gateway", "forms", "orders", "concepts"],
+    "clusteredDbApps": [],
+    "consoleOptions": ["zipkin"],
+    "serviceDiscoveryType": "eureka",
+    "dockerRepositoryName": "enyachoke",
+    "dockerPushCommand": "docker push",
+    "kubernetesNamespace": "default",
+    "kubernetesServiceType": "LoadBalancer",
+    "ingressDomain": "",
+    "istio": false,
+    "jwtSecretKey": "MTIxNzdlOWM1NmJjZDU4MTA5MjkzODUwOWUzMDdlZmVkNmE2YTYxZTc0MmQ0NDRkYzY1MTA2MmI2MzBkN2RlNjZjYTk2YzVlZjU5NmUwYmY0ZDQ5ZWE0ZjRiNjg4YmEyZjdhOQ=="
+  }
+}

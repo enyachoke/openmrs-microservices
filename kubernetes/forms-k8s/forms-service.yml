@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: forms
+  namespace: default
+  labels:
+    app: forms
+spec:
+  selector:
+    app: forms
+  ports:
+    - name: http
+      port: 8082

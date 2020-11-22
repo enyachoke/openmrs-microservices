@@ -1,0 +1,21 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+    - image: enyachoke/gateway
+      context: ../gateway
+      jib: {}
+    - image: enyachoke/forms
+      context: ../forms
+      jib: {}
+    - image: enyachoke/orders
+      context: ../orders
+      jib: {}
+    - image: enyachoke/concepts
+      context: ../concepts
+      jib: {}
+  tagPolicy:
+    envTemplate:
+      template: '{{.IMAGE_NAME}}:latest'
+deploy:
+  kustomize: {}

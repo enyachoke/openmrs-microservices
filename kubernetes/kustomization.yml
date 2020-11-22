@@ -1,0 +1,22 @@
+commonLabels:
+  app.kubernetes.io/genereted-by: JHipster
+
+resources:
+  # Individual apps
+  - gateway-k8s/gateway-deployment.yml
+  - gateway-k8s/gateway-service.yml
+  - gateway-k8s/gateway-postgresql.yml
+  - forms-k8s/forms-deployment.yml
+  - forms-k8s/forms-service.yml
+  - forms-k8s/forms-postgresql.yml
+  - orders-k8s/orders-deployment.yml
+  - orders-k8s/orders-service.yml
+  - orders-k8s/orders-postgresql.yml
+  - concepts-k8s/concepts-deployment.yml
+  - concepts-k8s/concepts-service.yml
+  - concepts-k8s/concepts-postgresql.yml
+  # service discovery eureka/consul
+  - registry-k8s/jhipster-registry.yml
+  - registry-k8s/application-configmap.yml
+
+patchesJson6902:

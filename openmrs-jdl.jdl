@@ -1,0 +1,316 @@
+application {
+  config {
+    baseName gateway,
+    packageName org.openmrs.gateway,
+    applicationType gateway,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    serviceDiscoveryType eureka,
+    testFrameworks [protractor]
+    }
+    entities Form, FormField , FieldType , FieldAnswer, FieldAnswer 
+, Field , OrderType, DrugOrder, Order, Concept, ConceptName, ConceptDescription,
+ConceptSet, ConceptNumeric, ConceptComplex, ConceptAnswer, ConceptNameTag,
+ConceptWord, ConceptProposalTagMap, ConceptNameTagMap,
+ConceptProposal, ConceptReferenceTerm
+}
+application {
+  config {
+    baseName forms,
+    packageName org.openmrs.forms,
+    applicationType microservice,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    serverPort 8082,
+    serviceDiscoveryType eureka
+  }
+  entities Form, FormField , FieldType , FieldAnswer, FieldAnswer , Field
+}
+
+application {
+  config {
+    baseName orders,
+    packageName org.openmrs.orders,
+    applicationType microservice,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    serverPort 8083,
+    serviceDiscoveryType eureka
+  }
+  entities OrderType, DrugOrder, Order
+}
+
+application {
+  config {
+    baseName concepts,
+    packageName org.openmrs.concepts,
+    applicationType microservice,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    serverPort 8085,
+    serviceDiscoveryType eureka
+  }
+  entities Concept, ConceptName, ConceptDescription,
+ConceptSet, ConceptNumeric, ConceptComplex, ConceptAnswer, ConceptNameTag,
+ConceptWord, ConceptProposalTagMap, ConceptNameTagMap,
+ConceptProposal, ConceptReferenceTerm, ConceptReferenceSource,
+ConceptProposalReferenceMap, ConceptDataType, ConceptStopWord, ConceptClass, Drug
+}
+
+//Form
+
+entity Form {
+uuid UUID required
+name String
+version String
+build Integer
+published Boolean
+description String
+encounterType UUID required
+template String
+xslt String
+}
+
+entity FormField {
+uuid UUID required
+name String
+fieldNumber Integer
+fieldPart String
+pageNumber Integer
+minOccurs Integer
+maxOccurs Integer
+isRequired Boolean
+sortWeight Float
+}
+
+entity FieldType {
+uuid UUID required
+name String
+description String
+isSet Boolean
+}
+
+entity FieldAnswer {
+uuid UUID required
+}
+
+entity Field {
+uuid UUID required
+name String
+description String
+conceptUuid UUID
+tableName String
+attributesName String
+defaultValue String
+selectMultiple Boolean 
+}
+
+
+
+//Order
+entity Order {
+uuid UUID required
+conceptUuid UUID
+ordererUuid UUID
+encounterUuid UUID
+instructions String
+startDate LocalDate
+autoExpireDate LocalDate
+discontinued Boolean
+discontinuedDate LocalDate
+accessionNumber String
+discontinuedReasonNonCoded String
+patientUuid UUID
+}
+
+entity OrderType {
+uuid UUID required
+name String
+description String
+}
+
+entity DrugOrder {
+uuid UUID required
+drugInventoryUuid UUID
+dose Double
+equivalentDailyDose Double
+units String
+frequency String
+prn Boolean
+complex Boolean
+quantity Integer
+}
+
+
+
+//Concept
+entity Concept {
+uuid UUID required
+shortName String
+description String
+formText String
+version String
+isSet Boolean
+}
+entity ConceptName {
+uuid UUID required
+name String
+locale String
+conceptNameType String
+}
+
+entity ConceptDescription  {
+uuid UUID required
+description String
+locale String
+}
+
+entity ConceptSet {
+uuid UUID required
+sortWeight Double
+}
+entity ConceptNumeric {
+uuid UUID required
+hiAbsolute Double
+hiNormal Double
+hiCritical Double
+lowAbsolute Double
+lowNormal Double
+lowCritical Double
+units String
+precise Boolean
+}
+entity ConceptComplex {
+uuid UUID required
+handler String
+}
+entity ConceptAnswer {
+uuid UUID required
+sortWeight Double
+}
+entity ConceptNameTag {
+uuid UUID required
+tag String
+description  String
+}
+entity ConceptWord {
+uuid UUID required
+word String
+locale String
+weight Double
+}
+entity ConceptProposalTagMap {
+uuid UUID required
+}
+entity ConceptNameTagMap {
+uuid UUID required
+}
+
+entity ConceptProposal {
+uuid UUID required
+encounter UUID
+originalText String
+finalText String
+obsUuid UUID
+obsConceptUuid UUID
+state String
+comments String
+locale String
+}
+
+entity ConceptReferenceTerm {
+uuid UUID required
+name String
+code String
+version String
+description  String
+
+}
+
+entity ConceptReferenceSource {
+uuid UUID required
+name String
+description  String
+hl7Code String
+}
+
+
+entity ConceptProposalReferenceMap {
+uuid UUID required
+}
+
+
+entity ConceptDataType {
+uuid UUID required
+name String
+hl7Abbreviation String
+description String
+
+}
+
+entity ConceptReferenceTermMap {
+uuid UUID required
+name String
+description  String
+isHidden Boolean
+}
+
+entity ConceptMapType {
+uuid UUID required
+
+}
+
+entity ConceptStopWord {
+uuid UUID required
+word String
+locale  String
+}
+
+entity ConceptClass {
+uuid UUID required
+name String
+description  String
+}
+
+entity Drug {
+uuid UUID required
+name String
+combination  Boolean
+dosageForm Integer
+doseStrength Double
+maximumDailyDose Double
+minimumDailyDose Double
+route Integer
+units String
+}
+
+
+//paginate Post, Tag with infinite-scroll
+//paginate Product with pagination
+
+microservice Form, FormField , FieldType , FieldAnswer, FieldAnswer 
+, Field with forms
+microservice OrderType, DrugOrder, Order with orders
+
+microservice Concept, ConceptName, ConceptDescription,
+ConceptSet, ConceptNumeric, ConceptComplex, ConceptAnswer, ConceptNameTag,
+ConceptWord, ConceptProposalTagMap, ConceptNameTagMap,
+ConceptProposal, ConceptReferenceTerm, ConceptReferenceSource,
+ConceptProposalReferenceMap, ConceptMapType, ConceptReferenceTermMap, 
+ConceptDataType, ConceptStopWord, ConceptClass, Drug with concepts
+
+// will be created under 'docker-compose' folder
+deployment {
+  deploymentType docker-compose
+  appsFolders [gateway, forms , orders,concepts]
+  dockerRepositoryName "enyachoke"
+  consoleOptions [zipkin]
+}
+
+// will be created under 'kubernetes' folder
+deployment {
+  deploymentType kubernetes
+  appsFolders [gateway, forms , orders, concepts]
+  dockerRepositoryName "enyachoke"
+  consoleOptions [zipkin]
+}
